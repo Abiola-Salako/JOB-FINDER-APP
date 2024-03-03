@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:monthly_mini_project/welcome_page/welcome_page.dart';
 
 class HaveAccount extends StatelessWidget {
   const HaveAccount({super.key});
@@ -14,7 +15,14 @@ class HaveAccount extends StatelessWidget {
               color: Colors.black38
           ),
         ),
-        TextButton(onPressed: () {},
+        TextButton(onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context){
+                return WelcomeBackPage();
+              })
+          );
+        },
           child: Text("Log In",
             style: TextStyle(
               color: Colors.black,
